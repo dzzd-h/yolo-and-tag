@@ -1,0 +1,18 @@
+<launch>
+  <arg name="config" default="$(find hexapod_perception)/config/perception.yaml" />
+  <arg name="model_path" default="" />
+  <arg name="front_feature_model_path" default="" />
+  <arg name="green_feature_model_path" default="" />
+  <arg name="output_frame" default="base_link" />
+  <arg name="device" default="cpu" />
+
+  <node pkg="hexapod_perception" type="perception_node"
+        name="hexapod_perception" output="screen">
+    <rosparam command="load" file="$(arg config)" />
+    <param if="$(eval arg('model_path') != '')" name="model_path" value="$(arg model_path)" />
+    <param if="$(eval arg('front_feature_model_path') != '')" name="front_feature_model_path" value="$(arg front_feature_model_path)" />
+    <param if="$(eval arg('green_feature_model_path') != '')" name="green_feature_model_path" value="$(arg green_feature_model_path)" />
+    <param name="output_frame" value="$(arg output_frame)" />
+    <param name="device" value="$(arg device)" />
+  </node>
+</launch>

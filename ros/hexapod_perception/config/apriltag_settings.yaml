@@ -1,0 +1,12 @@
+# AprilTag 3 detector settings for the 640x480 Orbbec color stream.
+tag_family: tag36h11
+tag_threads: 4
+tag_decimate: 1.0
+tag_blur: 0.0
+tag_refine_edges: 1
+tag_debug: 0
+max_hamming_dist: 1
+
+# Publish camera_color_optical_frame -> xiaolan_apriltag TF.
+publish_tf: true
+transport_hint: raw

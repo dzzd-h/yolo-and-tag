@@ -1,0 +1,5 @@
+# Size is the black/white code-border edge length, excluding the outer paper.
+standalone_tags:
+  - {id: 4, size: 0.060, name: xiaolan_apriltag}
+
+tag_bundles: []

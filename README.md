@@ -1,9 +1,14 @@
 # YOLO and Tag
 
-独立的 YOLO + 小蓝 AprilTag 视觉对接目录。
+独立的 YOLO + 小蓝 AprilTag 视觉算法仓库。
 
-本仓库与 `Grasp_hexapod` 完全独立，不修改、不依赖其控制代码。识别算法保持
-原样；这里固定对外接口，方便其他项目接入。
+本仓库与 `Grasp_hexapod` 完全独立，不修改、不依赖其控制代码。这里包含 YOLO
+RGB-D 位姿源码和小蓝 Tag 节点源码；模型权重不提交，部署时通过参数指定。
+
+源码位置：
+
+- `ros/hexapod_perception/`：YOLO + RGB-D 位姿算法
+- `ros/xiaolan_tag/`：小蓝三 Tag 检测与事件节点
 
 ## 输入
 
